@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://osmanikarateclub.vercel.app/sitemap.xml
