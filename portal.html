@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>নিরাপদ লগইন | Osmani Karate Club Sylhet</title><link rel="stylesheet" href="assets/portal.css">
+</head><body><main class="portal-shell"><div class="portal-wrap">
+<header class="portal-top"><a class="portal-brand" href="index.html"><img src="images/logo.png" alt="Club logo"><span>OSMANI KARATE CLUB<br><small>SYLHET • STUDENT PORTAL</small></span></a><div class="portal-actions"><button id="portalLang" class="portal-btn secondary lang-toggle" type="button">English</button><a class="home-link" href="index.html">← মূল ওয়েবসাইট</a></div></header>
+<section id="authPanel" class="portal-card">
+<div class="login-mark"><img src="images/logo.png" alt="Osmani Karate Club logo"><span>OSMANI KARATE CLUB</span><small>SYLHET • SECURE ACCESS</small></div><h1 data-i18n="welcome">স্বাগতম</h1><p class="portal-muted" data-i18n="secure">আপনার পরিচয় নির্বাচন করে নিরাপদে প্রবেশ করুন</p>
+<div class="portal-tabs"><button id="loginTab" class="active" type="button" data-i18n="login">লগইন</button><button id="signupTab" type="button" data-i18n="signup">নতুন অ্যাকাউন্ট</button></div>
+<div id="loginBox">
+<form id="loginForm"><div class="portal-field"><label>আপনার পরিচয়</label><select name="login_role" id="loginRole" required><option value="student">শিক্ষার্থী</option><option value="sensei">সেন্সেই</option><option value="trainer">প্রশিক্ষক</option><option value="main_admin">Main Admin</option><option value="admin">Admin</option></select></div><div class="portal-field"><label>ইমেইল ঠিকানা</label><input name="email" type="email" required autocomplete="email"></div><div class="portal-field"><label>পাসওয়ার্ড</label><input name="password" type="password" required autocomplete="current-password"></div><button class="portal-btn" type="submit">লগইন</button></form>
+</div>
+<div id="signupBox" class="portal-hidden">
+<form id="signupForm"><div class="portal-grid">
+<div class="portal-field"><label>শিক্ষার্থীর নাম</label><input name="full_name" required></div>
+<div class="portal-field"><label>মোবাইল নম্বর</label><input name="phone" required type="tel"></div>
+<div class="portal-field"><label>শিক্ষার্থী রোল নম্বর</label><input name="roll_no" required></div>
+<div class="portal-field"><label>ইমেইল ঠিকানা</label><input name="email" type="email" required></div>
+<div class="portal-field"><label>পাসওয়ার্ড (কমপক্ষে ৮ অক্ষর)</label><input name="password" type="password" minlength="8" required></div>
+</div><button class="portal-btn" type="submit">অ্যাকাউন্ট তৈরি করুন</button></form>
+</div><div id="authMessage" class="portal-note portal-hidden" role="status"></div>
+<p class="portal-small" data-i18n="accountNote">Student accounts can access their own profile. Staff access is assigned by the Main Admin.</p>
+</section>
+
+<section id="studentPanel" class="portal-hidden">
+<div class="portal-card"><div class="portal-actions" style="justify-content:space-between"><div><h1 id="welcomeName">শিক্ষার্থী ড্যাশবোর্ড</h1><p class="portal-muted" id="studentMeta">আপনার তথ্য</p></div><button id="logoutBtn" class="portal-btn secondary">লগআউট</button></div>
+<div id="studentMessage" class="portal-note portal-hidden"></div>
+<div id="pendingBox" class="portal-note portal-hidden">আপনার অ্যাকাউন্ট এখনো অ্যাডমিন যাচাই করেননি। যাচাই সম্পন্ন হলে শিক্ষার্থী প্রোফাইল দেখা যাবে।</div>
+<div id="studentData" class="portal-grid portal-hidden"><div class="portal-stat student-photo-stat"><img id="studentPhoto" alt="Student profile photo" src="images/logo.png"><span>Student Profile</span></div>
+<div class="portal-stat"><span class="portal-muted">রোল নম্বর</span><strong id="sRoll">—</strong></div>
+<div class="portal-stat"><span class="portal-muted">বেল্টের স্তর</span><strong id="sBelt">—</strong></div>
+<div class="portal-stat"><span class="portal-muted">ব্যাচ</span><strong id="sBatch">—</strong></div>
+<div class="portal-stat"><span class="portal-muted">মাসিক ফি</span><strong id="sFee">—</strong></div></div>
+</div>
+<div id="admissionPanel" class="portal-card portal-hidden"><h2 data-i18n="admissionTitle">ADMISSION FORM</h2><p class="portal-muted" data-i18n="admissionHelp">Complete your student information. Only you and authorized club admins can view it.</p><form id="admissionForm"><div class="portal-grid">
+<div class="portal-field"><label data-i18n="photo">Profile Photo</label><input name="photo" type="file" accept="image/png,image/jpeg,image/webp"></div>
+<div class="portal-field"><label data-i18n="roll">Student Roll Number</label><input name="roll_no" required></div>
+<div class="portal-field"><label data-i18n="fullName">Full Name</label><input name="full_name" required></div>
+<div class="portal-field"><label data-i18n="phone">Phone Number</label><input name="phone" type="tel" required></div>
+<div class="portal-field"><label data-i18n="guardian">Guardian Name</label><input name="guardian_name"></div>
+<div class="portal-field"><label data-i18n="guardianPhone">Guardian Phone</label><input name="guardian_phone" type="tel"></div>
+<div class="portal-field"><label data-i18n="address">Address</label><textarea name="address"></textarea></div>
+<div class="portal-field"><label data-i18n="batch">Batch</label><input name="batch"></div>
+</div><button class="portal-btn" type="submit" data-i18n="saveAdmission">Save Admission Form</button></form><div id="admissionMessage" class="portal-note portal-hidden"></div></div>
+<div id="studentExamPanel" class="portal-card portal-hidden"><h2>Exam Results</h2><div class="portal-table-wrap"><table class="portal-table"><thead><tr><th>Exam</th><th>Date</th><th>Score</th><th>Grade</th><th>Result</th><th>Remarks</th></tr></thead><tbody id="studentExamRows"></tbody></table></div></div>
+<div id="paymentPanel" class="portal-card portal-hidden"><h2>মাসিক ফি জমা দিন</h2><p class="portal-muted">বিকাশ বা নগদে ফি পাঠিয়ে নিচের তথ্য জমা দিন। অ্যাডমিন যাচাই না করা পর্যন্ত পেমেন্ট অপেক্ষমাণ থাকবে।</p>
+<p class="portal-note">টাকা পাঠানোর আগে ক্লাবের Admin-এর কাছ থেকে বর্তমান অফিসিয়াল bKash/Nagad নম্বর নিশ্চিত করো। <a href="payment.html">পেমেন্টের তথ্য দেখুন</a>।</p><form id="paymentForm"><div class="portal-grid">
+<div class="portal-field"><label>ফি প্রদানের মাস</label><input name="payment_month" type="month" required></div>
+<div class="portal-field"><label>টাকার পরিমাণ (৳)</label><input name="amount" type="number" min="1" step="1" required></div>
+<div class="portal-field"><label>পেমেন্টের মাধ্যম</label><select name="method" required><option value="bkash">bKash</option><option value="nagad">Nagad</option></select></div>
+<div class="portal-field"><label>যে নম্বর থেকে পাঠিয়েছ</label><input name="sender_phone" type="tel" required></div>
+<div class="portal-field"><label>লেনদেন আইডি</label><input name="transaction_id" required></div>
+<div class="portal-field"><label>পেমেন্টের প্রমাণ (ছবি/PDF, সর্বোচ্চ ১০ MB)</label><input name="proof" type="file" accept="image/png,image/jpeg,image/webp,application/pdf"></div>
+</div><button class="portal-btn" type="submit">পেমেন্টের তথ্য জমা দিন</button></form><div id="paymentMessage" class="portal-note portal-hidden"></div></div>
+<div id="historyPanel" class="portal-card portal-hidden"><h2>পেমেন্টের ইতিহাস</h2><div class="portal-table-wrap"><table class="portal-table"><thead><tr><th>মাস</th><th>পরিমাণ</th><th>মাধ্যম</th><th>অবস্থা</th><th>জমার তারিখ</th></tr></thead><tbody id="paymentRows"></tbody></table></div></div>
+</section>
+<div class="portal-foot">© 2026 Osmani Karate Club Sylhet</div>
+</div></main>
+<script src="assets/supabase-config.js"></script><script type="module" src="assets/portal.js"></script>
+</body></html>
